@@ -2,8 +2,8 @@ import _ from 'lodash';
 import './style/main.css'
 import home from './pages/home'
 import headerDiv from './pages/header';
-import initialLoad from './pages/landingPage';
 import recipes from './pages/recipes';
+import renderPage from './pages/landingPage';
 
 
 
@@ -14,7 +14,7 @@ function component(){
 } 
 
 document.body.appendChild(component());
-recipes();
 home();
+//recipes();
 headerDiv();
-initialLoad();
+renderPage();
