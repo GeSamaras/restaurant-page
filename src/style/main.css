@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Indie+Flower&family=Montserrat:wght@100&family=Press+Start+2P&display=swap');
+
+html{
+    font-family: "Indie Flower", "Press Start 2P", "Montserrat", "Agbalumo", sans-serif;
+}
+
 
 body {
     background-color: rgba(223, 190, 223, 0.838);
@@ -11,6 +17,34 @@ body {
     background-position:center top; 
     background-image: url("../assets/yurucamp-wallpaper.png");
     */
+}
+
+#recipeContainer{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-content: center;
+    margin: 1rem 1rem;
+    font-weight: bold;
+    color:rgb(115, 127, 219)
+}
+
+#pastaRecipe{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    background-color: rgb(196, 224, 255);
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+#pastaVideo{
+    width: 560px;
+    height: 315px;
+    border-radius: 16px;
+    filter: drop-shadow(0 0 0.75rem rgb(57, 118, 159));
+    outline: rgb(225, 235, 243) solid 6px;
 }
 
 

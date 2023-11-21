@@ -16,7 +16,38 @@
 // and a dropdown menu with the ingredients and instructions
 
 const recipes = function(){
-    
+    const content = document.querySelector("#container");
 
+    const recipeContainer = document.createElement('div');
+    recipeContainer.id = 'recipeContainer';
+
+    // Pasta soup recipe block
+    const pastaRecipe = document.createElement('div');
+    pastaRecipe.id = 'pastaRecipe';
+
+    const pastaVideo = document.createElement('iframe');
+    pastaVideo.src = 'https://www.youtube.com/embed/8eskh9wQyQs';
+    pastaVideo.id = 'pastaVideo';
+    pastaVideo.allowFullscreen = true;
+    pastaRecipe.appendChild(pastaVideo);
+
+    const pastaTitle = document.createElement('h2');
+    pastaTitle.id = 'pastaTitle';
+    pastaTitle.textContent = 'Creamy Soup Pasta';
+    pastaRecipe.appendChild(pastaTitle);
+
+    const pastaDescription = document.createElement('p');
+    pastaDescription.id = 'pastaDescription';
+    pastaDescription.textContent = 'A creamy soup pasta with bacon, mushrooms, and asparagus. Perfect for some laid back camping or the comforts of home.';
+    pastaRecipe.appendChild(pastaDescription);
+
+    //const pastaDropdown = document.createElement('div');
+
+    recipeContainer.appendChild(pastaRecipe);
+    content.appendChild(recipeContainer);
+
+    return recipeContainer;
     
 }
+
+export default recipes;

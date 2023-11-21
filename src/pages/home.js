@@ -12,7 +12,6 @@ const home = function(){
     homeBackground.id = 'homeBackground';
     home.appendChild(homeBackground);
     
-    // videolink https://www.youtube.com/watch?v=pNNwudhgvEY
     const homeVideo = document.createElement('iframe');
     homeVideo.src = 'https://www.youtube.com/embed/pNNwudhgvEY';
     homeVideo.id = 'homeVideo';
