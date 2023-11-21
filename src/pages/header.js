@@ -7,7 +7,7 @@ import nade2 from '../assets/nade2.png';
 
 const headerDiv = function(){
     // main html element to append everything to
-    const content = document.querySelector("#container");
+    const content = document.querySelector("#home");
     
     // creating the parent div for the other elements to be appended to
     const header = document.createElement('div');

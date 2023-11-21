@@ -15,8 +15,8 @@
 // each one with a video, their name, a short description
 // and a dropdown menu with the ingredients and instructions
 
-const recipes = function(){
-    const content = document.querySelector("#container");
+/* const recipes = function(){
+    const homeDiv = document.querySelector("#home");
 
     const recipeContainer = document.createElement('div');
     recipeContainer.id = 'recipeContainer';
@@ -44,10 +44,49 @@ const recipes = function(){
     //const pastaDropdown = document.createElement('div');
 
     recipeContainer.appendChild(pastaRecipe);
-    content.appendChild(recipeContainer);
+    homeDiv.appendChild(recipeContainer);
 
     return recipeContainer;
-    
+} */
+
+class recipes {
+    constructor(video, title, description) {
+        this.video = video;
+        this.title = title;
+        this.description = description;
+        
+        this.createRecipeContainer = function () {
+
+            const recipeBlock = document.createElement('div');
+            recipeBlock.id = 'recipeBlock';
+
+            const recipeVideo = document.createElement('iframe');
+            recipeVideo.src = this.video;
+            recipeBlock.appendChild(recipeVideo);
+
+            const recipeTitle = document.createElement('h2');
+            recipeTitle.id = 'recipeTitle';
+            recipeTitle.textContent = this.title;
+            recipeBlock.appendChild(recipeTitle);
+
+            const recipeDescription = document.createElement('p');
+            recipeDescription.id = 'recipeDescription';
+            recipeDescription.textContent = this.description;
+            recipeBlock.appendChild(recipeDescription);
+
+
+        };
+    }
 }
+
+const pastaRecipe = new recipes(
+    'https://www.youtube.com/embed/8eskh9wQyQs',
+    'Creamy Soup Pasta',
+    'A creamy soup pasta with bacon, mushrooms, and asparagus. Perfect for some laid back camping or the comforts of home.'
+);
+
+pastaRecipe.createRecipeContainer();
+
+    
 
 export default recipes;
