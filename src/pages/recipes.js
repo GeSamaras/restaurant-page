@@ -41,9 +41,32 @@ const recipes = function(){
     pastaDescription.textContent = 'A creamy soup pasta with bacon, mushrooms, and asparagus. Perfect for some laid back camping or the comforts of home.';
     pastaRecipe.appendChild(pastaDescription);
 
-    //const pastaDropdown = document.createElement('div');
+
+    // Sukiyaki recipe block
+    const sukiyakiRecipe = document.createElement('div');
+    sukiyakiRecipe.id = 'sukiyakiRecipe';
+
+    const sukiyakiVideo = document.createElement('iframe');
+    sukiyakiVideo.src = 'https://www.youtube.com/embed/9VWjBlMnH9E';
+    sukiyakiVideo.id = 'sukiyakiVideo';
+    sukiyakiVideo.allowFullscreen = true;
+    sukiyakiRecipe.appendChild(sukiyakiVideo);
+
+    const sukiyakiTitle = document.createElement('h2');
+    sukiyakiTitle.id = 'sukiyakiTitle';
+    sukiyakiTitle.textContent = 'Sukiyaki';
+    sukiyakiRecipe.appendChild(sukiyakiTitle);
+
+    const sukiyakiDescription = document.createElement('p');
+    sukiyakiDescription.id = 'sukiyakiDescription';
+    sukiyakiDescription.textContent = 'A hot pot dish with beef, tofu, and vegetables. Perfect for a cold winter night.';
+    sukiyakiRecipe.appendChild(sukiyakiDescription);
+
+
+
 
     recipeContainer.appendChild(pastaRecipe);
+    recipeContainer.appendChild(sukiyakiRecipe);
     content.appendChild(recipeContainer);
 
     return recipeContainer;

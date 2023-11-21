@@ -27,10 +27,11 @@ body {
     align-content: center;
     margin: 1rem 1rem;
     font-weight: bold;
-    color:rgb(115, 127, 219)
+    color:rgb(115, 127, 219);
+    
 }
 
-#pastaRecipe{
+#pastaRecipe, #sukiyakiRecipe{
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -39,7 +40,7 @@ body {
     padding: 1rem;
 }
 
-#pastaVideo{
+#pastaVideo, #sukiyakiVideo{
     width: 560px;
     height: 315px;
     border-radius: 16px;
