@@ -2,25 +2,33 @@
 // rendering the content and switching between them
 import recipes from './recipes';
 import home from './home';
+import { head } from 'lodash';
+import headerDiv from './header';
 
 const renderPage =  function() {
-
-    const mainContent = document.querySelector("#container");
-
     const recipesTab = document.querySelector("#rinCozy");
     recipesTab.addEventListener("click", function(){
-        console.log("recipesTab clicked");
+        clearContent();
+        headerDiv();
         recipes();
     });
     
 
     const homeTab = document.querySelector("#yuruLogo");
     homeTab.addEventListener("click", function(){
-        console.log("homeTab clicked");
+        clearContent();
+        headerDiv();
         home();
     });
 
-
-    return recipesTab;
+    return renderPage;
 }
+
+function clearContent(){
+    const mainContent = document.querySelector("#container");
+    mainContent.innerHTML = "";
+    return mainContent;
+}
+
+
  export default renderPage;

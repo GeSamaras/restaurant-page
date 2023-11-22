@@ -63,8 +63,29 @@ const recipes = function(){
     sukiyakiRecipe.appendChild(sukiyakiDescription);
 
 
+    // Gyoza Nabe recipe block
+    const gyozaNabeRecipe = document.createElement('div');
+    gyozaNabeRecipe.id = 'gyozaNabeRecipe';
+
+    const gyozaNabeVideo = document.createElement('iframe');
+    gyozaNabeVideo.src = 'https://www.youtube.com/embed/ymLVpn18vm0';
+    gyozaNabeVideo.id = 'gyozaNabeVideo';
+    gyozaNabeVideo.allowFullscreen = true;
+    gyozaNabeRecipe.appendChild(gyozaNabeVideo);
+
+    const gyozaNabeTitle = document.createElement('h2');
+    gyozaNabeTitle.id = 'gyozaNabeTitle';
+    gyozaNabeTitle.textContent = 'Tantan Gyoza Nabe';
+    gyozaNabeRecipe.appendChild(gyozaNabeTitle);
+    
+    const gyozaNabeDescription = document.createElement('p');
+    gyozaNabeDescription.id = 'gyozaNabeDescription';
+    gyozaNabeDescription.textContent = 'A hot pot dish with gyoza, tofu, and vegetables. Perfect for a cold winter night.';
+    gyozaNabeRecipe.appendChild(gyozaNabeDescription);
 
 
+    // adding all the recipe blocks to the recipe container
+    recipeContainer.appendChild(gyozaNabeRecipe);
     recipeContainer.appendChild(pastaRecipe);
     recipeContainer.appendChild(sukiyakiRecipe);
     content.appendChild(recipeContainer);

@@ -31,7 +31,7 @@ body {
     
 }
 
-#pastaRecipe, #sukiyakiRecipe{
+#pastaRecipe, #sukiyakiRecipe, #gyozaNabeRecipe{
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -40,7 +40,7 @@ body {
     padding: 1rem;
 }
 
-#pastaVideo, #sukiyakiVideo{
+#pastaVideo, #sukiyakiVideo, #gyozaNabeVideo{
     width: 560px;
     height: 315px;
     border-radius: 16px;
@@ -59,13 +59,12 @@ body {
 
 
 #header {
-    display: grid;
-    justify-items:center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     z-index: 2;
-    position: sticky;
-
+    position: absolute;
+    height: 50vh;
 }
 
 #homeBackground {
